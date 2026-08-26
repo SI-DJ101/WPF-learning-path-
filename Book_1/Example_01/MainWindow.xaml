@@ -11,6 +11,8 @@
         <Button x:Name="btnStart" Width="135" Height="60" Content="Start"
             HorizontalAlignment="Left" VerticalAlignment="Top" 
             Margin="75,50,0,0"
+            Background="White" Foreground="LightBlue"
+            BorderBrush="Gray"
             FontFamily="Times New Roman" FontSize="26.667" FontWeight="Bold"
             Click="btnStart_Click" />
 
