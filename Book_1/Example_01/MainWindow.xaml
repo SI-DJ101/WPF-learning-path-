@@ -14,6 +14,7 @@
             Background="LightBlue" Foreground="White"
             BorderBrush="Gray"
             FontFamily="Times New Roman" FontSize="26.667" FontWeight="Bold"
+            IsEnabled="False"
             Click="btnStart_Click" />
 
         <Button x:Name="btnTime" Width="135" Height="60" Content="Czas"
@@ -22,6 +23,11 @@
             FontFamily="Times New Roman" FontSize="26.667" FontWeight="Bold"
             MouseEnter="btnTime_MouseEnter" MouseLeave="btnTime_MouseLeave" />
 
+        <Button x:Name="btnEnableStart" Width="135" Height="30"
+            Content="Aktywuj Start"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            Margin="275,65,0,0" 
+            Click="btnEnableStart_Click" />
     </Grid>
 
 </Window>

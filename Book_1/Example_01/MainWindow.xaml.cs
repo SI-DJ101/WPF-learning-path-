@@ -20,6 +20,7 @@ public partial class MainWindow : Window
         MessageBox.Show("Witaj, świecie!");
 
         btnStart.Visibility = Visibility.Visible;
+        btnStart.IsEnabled = false;
     }
     private void btnTime_MouseEnter(object sender, RoutedEventArgs e)
     {
@@ -30,5 +31,10 @@ public partial class MainWindow : Window
     private void btnTime_MouseLeave(object sender, RoutedEventArgs e)
     {
         btnTime.Content = "Czas";
+    }
+
+    private void btnEnableStart_Click(object sender, RoutedEventArgs e)
+    {
+        btnStart.IsEnabled = true;
     }
 }
