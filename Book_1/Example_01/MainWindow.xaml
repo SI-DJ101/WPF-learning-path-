@@ -11,13 +11,14 @@
         <Button x:Name="btnStart" Width="135" Height="60" Content="Start"
             HorizontalAlignment="Left" VerticalAlignment="Top" 
             Margin="75,50,0,0"
-            FontFamily="Times New Roman" FontSize="26.667" FontWeight="Bold" />
+            FontFamily="Times New Roman" FontSize="26.667" FontWeight="Bold"
+            Click="btnStart_Click" />
 
         <Button x:Name="btnTime" Width="135" Height="60" Content="Czas"
             HorizontalAlignment="Left" VerticalAlignment="Top" 
             Margin="75,150,0,0"
-            FontFamily="Times New Roman" FontSize="26.667" FontWeight="Bold" />
-
+            FontFamily="Times New Roman" FontSize="26.667" FontWeight="Bold"
+            MouseEnter="btnTime_MouseEnter" MouseLeave="btnTime_MouseLeave" />
 
     </Grid>
 

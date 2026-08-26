@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Windows;
 
 namespace Example_01;
 
@@ -10,5 +11,20 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+    }
+
+    private void btnStart_Click(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show("Witaj, świecie!");
+    }
+    private void btnTime_MouseEnter(object sender, RoutedEventArgs e)
+    {
+        DateTime now = DateTime.Now;
+        btnTime.Content = now.ToString("T");
+    }
+
+    private void btnTime_MouseLeave(object sender, RoutedEventArgs e)
+    {
+        btnTime.Content = "Czas";
     }
 }
