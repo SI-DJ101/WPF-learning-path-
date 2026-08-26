@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:Example_01"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
-        <Button Width="120" Height="30" Content="Zapisz"/>
+        <Button x:Name="btnStart" Width="135" Height="60" Content="Start"
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="75,50,0,0"
+            FontFamily="Times New Roman" FontSize="26.667" FontWeight="Bold" />
     </Grid>
+
 </Window>
