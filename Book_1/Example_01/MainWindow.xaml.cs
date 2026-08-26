@@ -15,7 +15,12 @@ public partial class MainWindow : Window
 
     private void btnStart_Click(object sender, RoutedEventArgs e)
     {
+        var opacityCopy = btnStart.Opacity;
+        btnStart.Opacity = 0.5;
+
         MessageBox.Show("Witaj, świecie!");
+
+        btnStart.Opacity = opacityCopy;
     }
     private void btnTime_MouseEnter(object sender, RoutedEventArgs e)
     {
