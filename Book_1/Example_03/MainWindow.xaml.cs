@@ -104,4 +104,14 @@ public partial class MainWindow : Window
                 rectKwadrat.Opacity = 1;
         }
     }
+
+    private void rdHide_Checked(object sender, RoutedEventArgs e)
+    {
+        rectKwadrat.Visibility = Visibility.Collapsed;
+    }
+
+    private void rdShow_Checked(object sender, RoutedEventArgs e)
+    {
+        rectKwadrat.Visibility = Visibility.Visible;
+    }
 }
