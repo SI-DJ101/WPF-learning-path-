@@ -12,7 +12,8 @@
         <Label x:Name="lblObwod" Content="Obwód:" Margin="50,90,0,0" />
 
         <TextBox x:Name="txtBok" Margin="120,32,0,0" Width="100" Height="20"
-            HorizontalAlignment="Left" VerticalAlignment="Top" />
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            TextChanged="txtBok_TextChanged" />
         <TextBox x:Name="txtPole" Margin="120,62,0,0" Width="100" Height="20" IsEnabled="false"
             HorizontalAlignment="Left" VerticalAlignment="Top" />
         <TextBox x:Name="txtObwod" Margin="120,92,0,0" Width="100" Height="20" IsEnabled="false"
@@ -23,7 +24,8 @@
 
         <Button x:Name="btnClear" Content="Wyczyść"
             HorizontalAlignment="Left" VerticalAlignment="Top"
-            Width="100" Height="30" Margin="120,150,0,0" />
+            Width="100" Height="30" Margin="120,150,0,0"
+            Click="btnClear_Click" />
 
     </Grid>
 </Window>
