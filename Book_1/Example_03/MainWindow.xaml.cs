@@ -1,15 +1,6 @@
-﻿using System.Drawing;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+﻿using System.Windows;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace Example_03;
 
@@ -54,36 +45,58 @@ public partial class MainWindow : Window
         lblMessage.Content = "Wpisz wymiar boku";
     }
 
+    // private void btnDraw_Click(object sender, RoutedEventArgs e)
+    // {
+    //     var color = System.Windows.Media.Brushes.Black;
+
+    //     if (double.TryParse(txtBok.Text, out double bok))
+    //     {
+    //         rectKwadrat.Width = bok;
+    //         rectKwadrat.Height = bok;
+            
+    //         switch (cmbColor.SelectedIndex)
+    //         {
+    //             case 0:
+    //                 color = System.Windows.Media.Brushes.Black;
+    //                 break;
+    //             case 1:
+    //                 color = System.Windows.Media.Brushes.Red;
+    //                 break;
+    //             case 2:
+    //                 color = System.Windows.Media.Brushes.Yellow;
+    //                 break;
+    //             case 3:
+    //                 color = System.Windows.Media.Brushes.Green;
+    //                 break;
+    //             case 4:
+    //                 color = System.Windows.Media.Brushes.Blue;
+    //                 break;
+    //         }
+
+    //         rectKwadrat.Stroke = color;
+    //         rectKwadrat.Fill = color;
+
+    //         if (chkEnableTransparency.IsChecked == true)
+    //             rectKwadrat.Opacity = 0.5;
+    //         else
+    //             rectKwadrat.Opacity = 1;
+    //     }
+    // }
+
     private void btnDraw_Click(object sender, RoutedEventArgs e)
     {
-        var color = System.Windows.Media.Brushes.Black;
-
-        if (double.TryParse(txtBok.Text, out double bok))
+        if (double.TryParse(txtBok.Text, out double bok) && bok <= 380)
         {
             rectKwadrat.Width = bok;
             rectKwadrat.Height = bok;
-            
-            switch (cmbColor.SelectedIndex)
-            {
-                case 0:
-                    color = System.Windows.Media.Brushes.Black;
-                    break;
-                case 1:
-                    color = System.Windows.Media.Brushes.Red;
-                    break;
-                case 2:
-                    color = System.Windows.Media.Brushes.Yellow;
-                    break;
-                case 3:
-                    color = System.Windows.Media.Brushes.Green;
-                    break;
-                case 4:
-                    color = System.Windows.Media.Brushes.Blue;
-                    break;
-            }
+        
+            var converter = new BrushConverter();
 
-            rectKwadrat.Stroke = color;
-            rectKwadrat.Fill = color;
+            if (converter.ConvertFromString(cmbColor.Text) is SolidColorBrush brush)
+            {
+                rectKwadrat.Stroke = brush;
+                rectKwadrat.Fill = brush;
+            }
 
             if (chkEnableTransparency.IsChecked == true)
                 rectKwadrat.Opacity = 0.5;
