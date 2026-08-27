@@ -8,4 +8,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Resource Include="Images/dancing.png" />
+    <Resource Include="Images/dancing.svg" />
+    <Resource Include="Images/dancing-couple-two-people-24802_64.png" />
+    <Resource Include="Images/bar-chart-676_16.png"/>
+  </ItemGroup>
+
 </Project>
