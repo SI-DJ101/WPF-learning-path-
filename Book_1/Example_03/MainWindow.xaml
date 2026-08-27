@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example_03"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Rysowanie kwadratu" Height="500" Width="700">
     <Grid>
+        <Label x:Name="lblBok" Content="Bok:" Margin="50,30,0,0" />
+        <Label x:Name="lblPole" Content="Pole:" Margin="50,60,0,0" />
+        <Label x:Name="lblObwod" Content="Obwód:" Margin="50,90,0,0" />
+        <Label x:Name="lblKolor" Content="Kolor:" Margin="50,120,0,0" />
 
+        <TextBox x:Name="txtBok" Margin="120,32,0,0" Width="100" Height="20"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            TextChanged="txtBok_TextChanged" />
+        <TextBox x:Name="txtPole" Margin="120,62,0,0" Width="100" Height="20" IsEnabled="false"
+            HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <TextBox x:Name="txtObwod" Margin="120,92,0,0" Width="100" Height="20" IsEnabled="false"
+            HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <ComboBox x:Name="cmbColor" SelectedIndex="0" Width="100" Height="20" 
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="120,122,0,0">
+            <ComboBoxItem Content="Black" />
+            <ComboBoxItem Content="Red" />
+            <ComboBoxItem Content="Yellow" />
+            <ComboBoxItem Content="Green" />            
+            <ComboBoxItem Content="Blue" />
+        </ComboBox>
+        <CheckBox x:Name="chkEnableTransparency" Content="Półprzezroczysty" 
+            Margin="120,162,0,0" />
+
+        <Label x:Name="lblMessage" Content="Wpisz wymiar boku" Foreground="Red" FontWeight="DemiBold"
+            Margin="240,28,0,0" />
+
+        <Button x:Name="btnDraw" Content="Rysuj"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            Width="100" Height="30" Margin="120,200,0,0"
+            Click="btnDraw_Click"  />
+
+        <Button x:Name="btnClear" Content="Wyczyść"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            Width="100" Height="30" Margin="120,240,0,0"
+            Click="btnClear_Click" />
+
+        <Rectangle x:Name="rectKwadrat" Width="0" Height="0" />
     </Grid>
 </Window>
