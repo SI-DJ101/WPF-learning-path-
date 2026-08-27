@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example_03"
         mc:Ignorable="d"
-        Title="Rysowanie kwadratu" Height="500" Width="700">
+        Title="Rysowanie kwadratu" Height="500" Width="700"
+        Background="Gainsboro">
     <Grid>
         <Label x:Name="lblBok" Content="Bok:" Margin="50,30,0,0" />
         <Label x:Name="lblPole" Content="Pole:" Margin="50,60,0,0" />
