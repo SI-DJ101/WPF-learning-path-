@@ -44,6 +44,10 @@
             Width="100" Height="30" Margin="120,240,0,0"
             Click="btnClear_Click" />
 
-        <Rectangle x:Name="rectKwadrat" Width="0" Height="0" />
+        <Rectangle x:Name="rectKwadrat" Width="0" Height="0"/>
+        
+        <RadioButton x:Name="rdHide" Content="Ukryj" Margin="400,36,0,0" Checked="rdHide_Checked" />
+        <RadioButton x:Name="rdShow" Content="Pokaż" Margin="500,36,0,0" Checked="rdShow_Checked" IsChecked="true" />
+
     </Grid>
 </Window>
