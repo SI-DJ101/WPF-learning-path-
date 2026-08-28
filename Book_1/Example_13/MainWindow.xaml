@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example_13"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="DataBinding example chapter 5.2" Height="250" Width="550">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Rozmiar" Grid.Row="0" Grid.Column="0" Margin="5" />
+        <Slider x:Name="sldFontSize" Grid.Row="0" Grid.Column="1" Margin="5"
+            VerticalAlignment="Center" Minimum="10" Value="15" Maximum="40" />
+
+        <Label Content="Kolor" Grid.Row="1" Grid.Column="0" Margin="5" />
+        <ComboBox x:Name="cmbColors" Grid.Row="1" Grid.Column="1" Margin="5"
+            SelectedIndex="0" Width="150" 
+            HorizontalAlignment="Left">
+            <ComboBoxItem Content="Black" />
+            <ComboBoxItem Content="Red" />
+            <ComboBoxItem Content="Green" />
+            <ComboBoxItem Content="Blue" />
+        </ComboBox>
+
+        <Label Content="Tekst" Grid.Row="2" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="txtInfo" Grid.Row="2" Grid.Column="1" Margin="5"
+             Text="Kolejny tekst wiązania danych"
+            Width="300" HorizontalAlignment="Left"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" 
+            Text="{Binding Text, ElementName=txtInfo}"
+            FontSize="{Binding Value, ElementName=sldFontSize}"
+            Foreground="{Binding SelectedItem.Content, ElementName=cmbColors}" />
+
+        
     </Grid>
 </Window>
