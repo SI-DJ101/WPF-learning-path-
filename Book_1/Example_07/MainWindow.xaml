@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example_07"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="WrapPanel" Height="150" Width="250">
+    <WrapPanel ItemHeight="50" ItemWidth="90">
+        <Button Content="Przycisk1" Margin="10" />
+        <Button Content="Przycisk2" Margin="10" />
+        <Button Content="Przycisk3" Margin="10" />
+        <Button Content="Przycisk4" Margin="10" />
 
-    </Grid>
+    </WrapPanel>
 </Window>
