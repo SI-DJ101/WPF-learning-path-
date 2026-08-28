@@ -47,8 +47,15 @@
         <Label Content="Długość:" Grid.Row="3" Grid.Column="0" Margin="5" />
         <TextBlock Grid.Row="3" Grid.Column="1" Margin="5"
             VerticalAlignment="Center"
-            Text="{Binding Text.Length, ElementName=txtInfo, StringFormat={} {0} znaków (znaki/znak)}"
-            Width="300" HorizontalAlignment="Left"/>
+            Width="300" HorizontalAlignment="Left">
+            <TextBlock.Text>
+                <Binding Path="Text.Length" ElementName="txtInfo">
+                    <Binding.StringFormat>
+                        {0} znaków (znaki/znak)
+                    </Binding.StringFormat>
+                </Binding>
+            </TextBlock.Text>
+        </TextBlock>
         
     </Grid>
 </Window>
