@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example_06"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="StackPanel" Height="150" Width="260">
+    <StackPanel>
+        <Label x:Name="lblQuestion" Content="Jaką porę roku lubisz najbardziej?" />
 
-    </Grid>
+        <RadioButton x:Name="radioBtn1" Content="Wiosna" />
+        <RadioButton x:Name="radioBtn2" Content="Lato" />
+        <RadioButton x:Name="radioBtn3" Content="Jesień" />
+        <RadioButton x:Name="radioBtn4" Content="Zima" />
+
+    </StackPanel>
 </Window>
