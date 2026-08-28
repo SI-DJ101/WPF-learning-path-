@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example_08"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="DockPanel" Height="150" Width="250">
 
-    </Grid>
+    <DockPanel LastChildFill="False">
+        <Button Content="00-Domyślny" Margin="2" />
+        <Button Content="01-Góra1" Margin="2" DockPanel.Dock="Top" />
+        <Button Content="02-Góra2" Margin="2" DockPanel.Dock="Top" />
+        <Button Content="03-Dół" Margin="2" DockPanel.Dock="Bottom" />
+        <Button Content="04-Prawy" Margin="2" DockPanel.Dock="Right" />
+        <Button Content="05-Ostatni" Margin="2" />
+    </DockPanel>
+
 </Window>
