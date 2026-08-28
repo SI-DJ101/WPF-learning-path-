@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example_11"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="DataBindingTest" Height="200" Width="550">
+    <StackPanel>
+        <Slider x:Name="sldTextSize" Minimum="10" Value="15" Maximum="45" />
+        <TextBlock FontSize="{Binding Path=Value, ElementName=sldTextSize}">
+            Testujemy wiązanie danych
+        </TextBlock>
+        <TextBlock FontSize="{Binding Value, ElementName=sldTextSize}">
+            Value przekazane do konstruktora, bez jawnego przypisania do właściwości Path
+        </TextBlock>
+        <TextBlock>
+            <TextBlock.FontSize>
+                <Binding Path="Value" ElementName="sldTextSize" />
+            </TextBlock.FontSize>
+            Jeszcze inna metoda zapisu wiązania danych
+        </TextBlock>
+    </StackPanel>
 </Window>
