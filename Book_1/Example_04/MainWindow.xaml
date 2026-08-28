@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Example_04"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Panel Canvas" Height="200" Width="300">
+    <Canvas>
+        <Button Content="Domyślny" />
+        <Button Content="Top 30" Canvas.Top="30" />
+        <Button Content="Right 10" Canvas.Right="10" />
+        <Button Content="Top 30 Left 50" Canvas.Top="30" Canvas.Left="50" />
+        <Button Content="Bottom 10 Right 10" Canvas.Bottom="10" Canvas.Right="10" />
 
-    </Grid>
+    </Canvas>
 </Window>
