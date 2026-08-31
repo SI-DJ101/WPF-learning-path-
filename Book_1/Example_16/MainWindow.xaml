@@ -25,7 +25,7 @@
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Quantity}"
                                         FontSize="12" Foreground="Green" FontWeight="Bold"
-                                        Background="LightGray" />
+                                        Background="LightGray" TextAlignment="Right" />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
