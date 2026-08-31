@@ -41,4 +41,9 @@ public partial class MainWindow : Window
         widok.SortDescriptions.Add(new SortDescription("StockId", ListSortDirection.Ascending));
         widok.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
     }
+
+    private void txtFilter_TextChanged(object sender, RoutedEventArgs e)
+    {
+        
+    }
 }
