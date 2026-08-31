@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <ListView x:Name="lstProducts">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Symbol" DisplayMemberBinding="{Binding Symbol}" />
+                        <GridViewColumn Header="Nazwa" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Liczba sztuk" DisplayMemberBinding="{Binding Quantity}" />
+                        <GridViewColumn Header="Magazyn" DisplayMemberBinding="{Binding StockId}" />
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
