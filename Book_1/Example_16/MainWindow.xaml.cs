@@ -39,5 +39,6 @@ public partial class MainWindow : Window
         CollectionView widok = (CollectionView)CollectionViewSource.GetDefaultView(lstProducts.ItemsSource);
         
         widok.SortDescriptions.Add(new SortDescription("StockId", ListSortDirection.Ascending));
+        widok.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
     }
 }
