@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,8 +18,23 @@ namespace Example_16;
 /// </summary>
 public partial class MainWindow : Window
 {
+    private ObservableCollection<Product>? ProductList = null;
     public MainWindow()
     {
         InitializeComponent();
+        PrepareBinding();
+    }
+
+    private void PrepareBinding()
+    {
+        ProductList = new ObservableCollection<Product>();
+
+        ProductList.Add(new Product("01-11", "ołówek", 8, "Katowice 1"));
+        ProductList.Add(new Product("PW-20", "pióro wieczne", 75, "Katowice 2"));
+        ProductList.Add(new Product("DZ-10", "długopis żelowy", 1121, "Katowice 1"));
+        ProductList.Add(new Product("DZ-12", "długopis kulkowy", 280, "Katowice 2"));
+
+        lstProducts.ItemsSource = ProductList;
+
     }
 }
