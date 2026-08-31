@@ -6,15 +6,22 @@
         xmlns:local="clr-namespace:Example_16"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        <ListView x:Name="lstProducts">
+        <ListView x:Name="lstProducts" >
             <ListView.View>
                 <GridView>
                     <GridView.Columns>
                         <GridViewColumn Header="Symbol" DisplayMemberBinding="{Binding Symbol}" />
                         <GridViewColumn Header="Nazwa" DisplayMemberBinding="{Binding Name}" />
-                        <GridViewColumn Header="Liczba sztuk">
-                            <GridViewColumn.CellTemplate>
+                        <GridViewColumn Header="Liczba sztuk" >
+                            <GridViewColumn.CellTemplate >
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Quantity}"
                                         FontSize="12" Foreground="Green" FontWeight="Bold"
