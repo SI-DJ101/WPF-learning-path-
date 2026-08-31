@@ -40,10 +40,19 @@ public partial class MainWindow : Window
         
         widok.SortDescriptions.Add(new SortDescription("StockId", ListSortDirection.Ascending));
         widok.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
+
+        widok.Filter = UserFilter;
     }
 
-    private void txtFilter_TextChanged(object sender, RoutedEventArgs e)
+    private bool UserFilter(object item)
     {
-        
+        if(String.IsNullOrEmpty(txtFilter.Text))
+            return true;
+        else
+            return(item as Product)?.Name.IndexOf(txtFilter.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+    }
+    private void txtFilter_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        CollectionViewSource.GetDefaultView(lstProducts.ItemsSource).Refresh();
     }
 }
