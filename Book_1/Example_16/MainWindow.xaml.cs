@@ -55,4 +55,10 @@ public partial class MainWindow : Window
     {
         CollectionViewSource.GetDefaultView(lstProducts.ItemsSource).Refresh();
     }
+
+    private void lstProducts_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+    {
+        var window1 = new NewWindow();
+        window1.Show();
+    }
 }
