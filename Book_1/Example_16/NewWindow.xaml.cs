@@ -43,6 +43,6 @@ public partial class NewWindow : Window
     
     private void btnConfirm_Click(object sender, RoutedEventArgs e)
     {
-        this.Close();
+        this.DialogResult =true;
     }
 }
