@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.DirectoryServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,9 +19,30 @@ namespace Example_16;
 /// </summary>
 public partial class NewWindow : Window
 {
+    private MainWindow? mainWindow = null;
     public NewWindow()
     {
         InitializeComponent();
+    }
 
+    public NewWindow(MainWindow window)
+    {
+        InitializeComponent();
+        mainWindow = window;
+        PrepareBinding();
+    }
+
+    private void PrepareBinding()
+    {
+        Product? productFromList = mainWindow?.lstProducts.SelectedItem as Product;
+        if (productFromList != null)
+        {
+            gridProduct.DataContext = productFromList;
+        }
+    }
+    
+    private void btnConfirm_Click(object sender, RoutedEventArgs e)
+    {
+        this.Close();
     }
 }

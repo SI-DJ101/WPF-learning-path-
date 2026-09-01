@@ -58,7 +58,7 @@ public partial class MainWindow : Window
 
     private void lstProducts_MouseDoubleClick(object sender, MouseButtonEventArgs e)
     {
-        var window1 = new NewWindow();
+        var window1 = new NewWindow(this);
         window1.Show();
     }
 }

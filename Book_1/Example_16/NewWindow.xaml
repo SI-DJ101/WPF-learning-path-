@@ -7,4 +7,35 @@
         mc:Ignorable="d"
         Title="Produkt" Height="220" Width="350">
 
+    <Grid x:Name="gridProduct">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Symbol:" Grid.Row="0" Grid.Column="0" Margin="5" />
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Text="{Binding Symbol}" />
+
+        <Label Content="Nazwa:" Grid.Row="1" Grid.Column="0" Margin="5" />
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Text="{Binding Name}" />
+
+        <Label Content="Liczba sztuk:" Grid.Row="2" Grid.Column="0" Margin="5"  />
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5" Text="{Binding Quantity}" />
+
+        <Label Content="Magazyn:" Grid.Row="3" Grid.Column="0" Margin="5" />
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="5" Text="{Binding StockId}" />
+
+        <Button x:Name="btnConfirm" Content="Potwierdź" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+            HorizontalAlignment="Center" Margin="4" MinWidth="120"
+            Click="btnConfirm_Click" />
+
+    </Grid>
 </Window>
